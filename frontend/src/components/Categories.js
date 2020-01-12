@@ -8,7 +8,7 @@ export default class Categories extends Component {
              <CategoryButton category={category} key={category.id}/>
             ))
         return (
-            <nav className="navbar navbar-default">
+            <nav className="navbar navbar-default scroll">
                 <ul className="nav nav-pills nav-justified">
                     <Link to='/'>
                         <li className="nav-item">

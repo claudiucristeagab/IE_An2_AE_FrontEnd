@@ -19,10 +19,10 @@ export default class Header extends Component {
              <CategoryButton category={category}/>
             ))
         return (
-            <div>
+            <div className="container-md">
                 <h1 className="text-center">Ye Olde Shoppe</h1>
                 <hr/>
-                <Categories categories={this.state.categories}/>
+                    <Categories categories={this.state.categories}/>
                 <hr/>
             </div>
         )
