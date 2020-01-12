@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ProductList from './ProductList';
+import {API_BASEURL} from '../constants/apiConstants';
 
 export default class Home extends Component {
     constructor(props){
@@ -30,13 +31,13 @@ export default class Home extends Component {
     }
     getProducts(category_id) {
         if(category_id!=null) {
-            fetch("http://18.222.27.221:3001/categories/"+category_id+'/products').then(res => res.json())
+            fetch(API_BASEURL+"/categories/"+category_id+'/products').then(res => res.json())
             .then(data => this.setState({
                 products: data
             }));
         }
         else {
-            fetch("http://18.222.27.221:3001/products/").then(res => res.json())
+            fetch(API_BASEURL+"/products/").then(res => res.json())
             .then(data => this.setState({
                 products: data
             }));

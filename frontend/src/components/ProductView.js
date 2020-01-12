@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {API_BASEURL} from '../constants/apiConstants';
 
 export default class ProductView extends Component {
     constructor(props){
@@ -43,7 +44,7 @@ export default class ProductView extends Component {
     }
     
     getProduct(id) {
-        fetch("http://18.222.27.221:3001/products/"+id).then(res => res.json())
+        fetch(API_BASEURL+"/products/"+id).then(res => res.json())
         .then(data => this.setState({
             product: data
         }));

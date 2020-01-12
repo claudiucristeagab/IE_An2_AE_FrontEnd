@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Categories from './Categories';
 import CategoryButton from './CategoryButton';
+import {API_BASEURL} from '../constants/apiConstants';
 
 export default class Header extends Component {
     constructor(props){
@@ -8,7 +9,7 @@ export default class Header extends Component {
         this.state = {categories: []}
     }
     componentWillMount(){
-        fetch("http://18.222.27.221:3001/categories").then(res => res.json())
+        fetch(API_BASEURL+"/categories").then(res => res.json())
         .then(data => this.setState({
             categories: data
         }));
