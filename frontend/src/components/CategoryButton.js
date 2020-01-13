@@ -5,10 +5,8 @@ export default class CategoryButton extends Component {
     render() {
         const category = this.props.category
         return (
-            <Link to={`/categories/${category.id}/products`}>
-                <li className="nav-item" key={category.id}>
-                    <a className="nav-link">{category.name}</a>
-                </li>
+            <Link to={`/categories/${category.id}/products`} className="nav-link" key={category.id}>
+                {category.name}
             </Link>
         )   
     }

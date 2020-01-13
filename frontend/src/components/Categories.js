@@ -10,10 +10,8 @@ export default class Categories extends Component {
         return (
             <nav className="navbar navbar-default scroll">
                 <ul className="nav nav-pills nav-justified">
-                    <Link to='/'>
-                        <li className="nav-item">
-                            <a className="nav-link">Home</a>
-                        </li>
+                    <Link to='/' className="nav-link">
+                        Home
                     </Link>
                     {categories}
                 </ul>

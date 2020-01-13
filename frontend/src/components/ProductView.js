@@ -17,7 +17,7 @@ export default class ProductView extends Component {
     
     render() {
         const product = this.state.product;
-        const total = this.state.quantity * product.price;
+        const total = (this.state.quantity * product.price).toFixed(2);
         return (
             <div className='container-md'>
                 <div className='row h-50'>
@@ -28,7 +28,7 @@ export default class ProductView extends Component {
                         <div>
                             <h3>{product.name}</h3>
                             <p>{product.description}</p>
-                            <div class="row">
+                            <div className="row">
                                 <div className="col">
                                     <span>Price: ${product.price}</span>
                                 </div>
@@ -39,7 +39,7 @@ export default class ProductView extends Component {
                         </div>
                         <hr/>
                         <div>
-                            <div class="row">
+                            <div className="row">
                                 <div className="col">
                                     <ProductQuantityCount quantity={this.state.quantity} action={this.handleTotal}/>
                                 </div>

@@ -29,7 +29,7 @@ export default class ProductQuantityCount extends Component {
                 <span className="input-group-btn">
                     <button className="btn btn-white btn-minuse" type="button" onClick={this.decrement}>-</button>
                 </span>
-                <input type="text" className="form-control no-padding add-color text-center height-25" maxlength="3" value={quantity}/>
+                <input type="text" className="form-control no-padding add-color text-center height-25" maxLength="3" value={quantity} readOnly={true}/>
                 <span className="input-group-btn">
                     <button className="btn btn-red btn-pluss" type="button" onClick={this.increment}>+</button>
                 </span>
